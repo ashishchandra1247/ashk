@@ -531,6 +531,62 @@ footer{text-align:center;color:var(--muted);padding:20px 20px 55px;font-size:10p
   .wall-tape,.wall-note{display:none!important}
 }
 
+
+/* Refined final section */
+.final-inner{
+  max-width:760px!important;
+}
+.final-inner h2{
+  font-family:'Cormorant Garamond',serif!important;
+  font-size:clamp(44px,6vw,76px)!important;
+  line-height:.98!important;
+  font-weight:500!important;
+  letter-spacing:-.025em!important;
+  margin:0 0 18px!important;
+  text-wrap:balance;
+}
+.final-subcopy{
+  max-width:560px!important;
+  margin:0!important;
+  font-family:'Manrope',sans-serif!important;
+  font-size:clamp(14px,1.35vw,17px)!important;
+  line-height:1.7!important;
+  color:rgba(255,255,255,.9)!important;
+}
+#surpriseText{
+  margin-top:24px!important;
+  font-family:'Cormorant Garamond',serif!important;
+  line-height:1.25!important;
+  text-align:left;
+}
+#surpriseText .anniv-line{
+  display:block;
+  font-size:clamp(28px,3.8vw,44px);
+  font-weight:600;
+  color:#fff;
+  margin-bottom:8px;
+}
+#surpriseText .future-line{
+  display:block;
+  max-width:620px;
+  font-family:'DM Serif Display',serif;
+  font-style:italic;
+  font-size:clamp(18px,2.3vw,27px);
+  line-height:1.35;
+  color:rgba(255,255,255,.94);
+}
+.final-inner button{
+  margin-top:24px!important;
+  padding:14px 22px!important;
+  font-size:12px!important;
+  letter-spacing:.07em!important;
+}
+@media(max-width:620px){
+  .final-card{padding:30px 22px!important}
+  .final-inner h2{font-size:clamp(40px,12vw,58px)!important}
+  #surpriseText{text-align:left}
+}
+
 </style>
 </head>
 <body>
@@ -775,11 +831,11 @@ footer{text-align:center;color:var(--muted);padding:20px 20px 55px;font-size:10p
 <section class="finale reveal">
   <div class="final-card" id="surpriseCard">
     <div class="final-inner">
-      <div class="eyebrow">Baby, one last thing</div>
-      <h2>I’d always<br>choose you.</h2>
-      <p>One year down. And somehow, knowing that I get to call this only the beginning makes me the happiest.</p>
+      
+      <h2>In every lifetime,<br>in every universe,<br>I’d choose you. ♥</h2>
+      <p class="final-subcopy">One year down — and somehow this still feels like only the beginning.</p>
       <button id="surpriseBtn">Tap here, Baby ♥</button>
-      <div id="surpriseText">Happy 1st Anniversary, Baby.<br>Here’s to us — and everything still waiting for us. ♥</div>
+      <div id="surpriseText"><span class="anniv-line">Happy 1st Anniversary, Baby.</span><span class="future-line">Here’s to us — and everything still waiting for us. ♥</span></div>
     </div>
   </div>
 </section>
