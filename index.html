@@ -319,7 +319,7 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif}
   min-height:660px;border-radius:42px;
   background:
     linear-gradient(rgba(50,35,28,.18),rgba(50,35,28,.45)),
-    url("assets/next-steps.jpg") center/cover no-repeat;
+    url("assets/ending-photo.jpg") center/cover no-repeat;
   position:relative;overflow:hidden;
   display:grid;place-items:end start;
   padding:50px;
@@ -480,6 +480,57 @@ footer{text-align:center;color:var(--muted);padding:20px 20px 55px;font-size:10p
   max-width:680px!important;
 }
 
+
+/* Expanded memory-wall collage */
+.memory-wall{
+  width:min(1120px,100%)!important;
+  height:780px!important;
+  margin:54px auto 10px!important;
+  position:relative!important;
+}
+.memory-card{
+  position:absolute;
+  background:#fffdf9;
+  padding:7px 7px 30px;
+  box-shadow:0 20px 52px rgba(76,49,37,.16);
+  border:1px solid rgba(100,70,53,.10);
+  transition:.45s cubic-bezier(.16,1,.3,1);
+  z-index:2;
+}
+.memory-card img{width:100%;height:100%;display:block;object-fit:cover}
+.memory-card[data-label]:after{
+  content:attr(data-label);position:absolute;left:10px;right:10px;bottom:8px;
+  font-family:'DM Serif Display',serif;font-style:italic;font-size:13px;color:#65534a
+}
+.memory-card:hover{z-index:30;transform:rotate(0deg) scale(1.04)!important}
+.mc1{width:22%;height:36%;left:1%;top:8%;transform:rotate(-6deg)}
+.mc2{width:20%;height:34%;left:19%;top:2%;transform:rotate(4deg)}
+.mc3{width:22%;height:35%;left:37%;top:8%;transform:rotate(-2deg)}
+.mc4{width:20%;height:34%;left:57%;top:1%;transform:rotate(5deg)}
+.mc5{width:22%;height:36%;right:1%;top:8%;transform:rotate(-5deg)}
+.mc6{width:19%;height:34%;left:5%;top:39%;transform:rotate(3deg)}
+.mc7{width:21%;height:35%;left:22%;top:36%;transform:rotate(-4deg)}
+.mc8{width:20%;height:34%;left:41%;top:42%;transform:rotate(4deg)}
+.mc9{width:21%;height:35%;left:59%;top:37%;transform:rotate(-3deg)}
+.mc10{width:19%;height:34%;right:4%;top:42%;transform:rotate(5deg)}
+.mc11{width:20%;height:32%;left:13%;bottom:0;transform:rotate(-3deg)}
+.mc12{width:20%;height:32%;left:31%;bottom:1%;transform:rotate(4deg)}
+.mc13{width:20%;height:32%;left:50%;bottom:0;transform:rotate(-4deg)}
+.mc14{width:20%;height:32%;right:11%;bottom:1%;transform:rotate(3deg)}
+.wall-tape{position:absolute;width:86px;height:24px;background:rgba(231,202,164,.58);z-index:20}
+.tape-one{left:17%;top:0;transform:rotate(-8deg)}
+.tape-two{right:15%;top:38%;transform:rotate(8deg)}
+.wall-note{position:absolute;z-index:25;font-family:'DM Serif Display',serif;font-style:italic;color:#b06f72}
+.note-one{left:1%;bottom:4%;transform:rotate(-7deg);font-size:18px}
+.note-two{right:1%;bottom:4%;transform:rotate(6deg);font-size:16px}
+@media(max-width:760px){
+  .memory-wall{height:auto!important;display:grid!important;grid-template-columns:1fr 1fr;gap:10px;padding:8px!important}
+  .memory-card{position:relative!important;width:auto!important;height:260px!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;padding:5px 5px 25px!important}
+  .memory-card:nth-of-type(3n){transform:rotate(1.5deg)!important}
+  .memory-card:nth-of-type(3n+1){transform:rotate(-1.5deg)!important}
+  .wall-tape,.wall-note{display:none!important}
+}
+
 </style>
 </head>
 <body>
@@ -492,15 +543,28 @@ footer{text-align:center;color:var(--muted);padding:20px 20px 55px;font-size:10p
     <div class="hero-note">14.08.2025 — the day you and I became “us”</div>
     <div class="stats"><div class="stat">1 year</div><div class="stat">11 chapters</div><div class="stat">countless memories</div></div>
   </div>
-  <div class="hero-collage">
-    <div class="tape"></div>
-    <div class="frame f1" data-label="our first date"><img src="assets/first-date.jpg" alt="Our first date"></div>
-    <div class="frame f2" data-label="one of our best days"><img src="assets/best-day.jpg" alt="One of our best days"></div>
-    <div class="frame f3" data-label="our first Goa trip"><img src="assets/goa-4.jpg" alt="Our first Goa trip"></div>
-    <div class="frame f4" data-label="when forever got closer"><img src="assets/roka.jpg" alt="When our marriage got fixed"></div>
-    <div class="doodle d1">our little world ♥</div><div class="doodle d2">so many firsts</div>
+  <div class="hero-collage memory-wall">
+    <div class="wall-tape tape-one"></div>
+    <div class="wall-tape tape-two"></div>
+    <div class="memory-card mc1" data-label="where it started"><img src="assets/first-date.jpg" alt=""></div>
+    <div class="memory-card mc2" data-label="one of my favourites"><img src="assets/best-day.jpg" alt=""></div>
+    <div class="memory-card mc3" data-label="Goa with you"><img src="assets/goa-4.jpg" alt=""></div>
+    <div class="memory-card mc4" data-label="forever got closer"><img src="assets/roka.jpg" alt=""></div>
+    <div class="memory-card mc5"><img src="assets/collage-extra-01.jpg" alt=""></div>
+    <div class="memory-card mc6"><img src="assets/collage-extra-02.jpg" alt=""></div>
+    <div class="memory-card mc7"><img src="assets/collage-extra-03.jpg" alt=""></div>
+    <div class="memory-card mc8"><img src="assets/collage-extra-04.jpg" alt=""></div>
+    <div class="memory-card mc9"><img src="assets/collage-extra-05.jpg" alt=""></div>
+    <div class="memory-card mc10"><img src="assets/collage-extra-06.jpg" alt=""></div>
+    <div class="memory-card mc11"><img src="assets/collage-extra-07.jpg" alt=""></div>
+    <div class="memory-card mc12"><img src="assets/collage-extra-08.jpg" alt=""></div>
+    <div class="memory-card mc13"><img src="assets/collage-extra-09.jpg" alt=""></div>
+    <div class="memory-card mc14"><img src="assets/collage-extra-10.jpg" alt=""></div>
+    <div class="wall-note note-one">365 days of us ♥</div>
+    <div class="wall-note note-two">my favourite people: you + me</div>
   </div>
-<a class="scroll-link" href="#story">Come, let’s relive the year that made us “us” ♥ <b>↓</b></a>
+
+  <a class="scroll-link" href="#story">Come, let’s relive the year that made us “us” ♥ <b>↓</b></a>
 </header>
 
 <div class="divider"></div>
@@ -670,8 +734,8 @@ footer{text-align:center;color:var(--muted);padding:20px 20px 55px;font-size:10p
       <div class="chapter-number">11</div>
       <div class="chapter-media">
         <div class="photo-stack">
-          <img class="stack-img a" src="assets/roka.jpg" alt="">
-          <img class="stack-img b" src="assets/next-steps.jpg" alt="">
+          <img class="stack-img a" src="assets/next-steps.jpg" alt="">
+          <img class="stack-img b" src="assets/roka.jpg" alt="">
         </div>
       </div>
       <div class="chapter-copy">
@@ -712,7 +776,7 @@ footer{text-align:center;color:var(--muted);padding:20px 20px 55px;font-size:10p
   <div class="final-card" id="surpriseCard">
     <div class="final-inner">
       <div class="eyebrow">Baby, one last thing</div>
-      <h2>I’d still<br>choose you.</h2>
+      <h2>I’d always<br>choose you.</h2>
       <p>One year down. And somehow, knowing that I get to call this only the beginning makes me the happiest.</p>
       <button id="surpriseBtn">Tap here, Baby ♥</button>
       <div id="surpriseText">Happy 1st Anniversary, Baby.<br>Here’s to us — and everything still waiting for us. ♥</div>
